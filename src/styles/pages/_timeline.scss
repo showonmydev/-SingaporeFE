@@ -1,0 +1,12 @@
+.page-timeline-container {
+  padding: 15px;
+
+  .page-timeline {
+    display: table;
+    position: relative;
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+}

@@ -1,0 +1,25 @@
+.video-thum-section h1 {
+    font-size: 17px;
+    margin: 0px;
+    text-align: justify;
+    padding-top: 10px;
+}
+.video-thum-section p {
+    color: #888;
+    margin-top: 10px;
+}
+.left-full-video,.right-full-video {
+    float: left;
+}
+.left-full-video video {
+    height: 222px;
+    width: 100%;
+}
+.right-full-video {
+    margin-top: 11px;
+}
+
+.main-video{
+	margin-top:10px;
+	margin-bottom: 15px;
+}

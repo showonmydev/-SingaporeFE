@@ -1,0 +1,98 @@
+.box-body.center {
+    text-align: center;
+}
+
+.box-body.center .upload input[type="file"] {
+    display: none;
+}
+
+.box-body.center .upload .upload_icon{
+	
+}
+
+/*
+NEW CSS 
+*/
+.upload i {
+    font-size: 192px;
+    color: #ccc;
+    /* position: absolute; */
+}
+label.upload {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 12;
+    bottom: 0px;
+     width: 100% !important;
+       height: 200px !important;
+}
+label.upload:hover {
+    background: transparent !important;
+}
+p.select-file {
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+select.select-option {
+    padding: 5px;
+    background: #f5f5f5;
+}
+.upload-file-label{    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 12;
+    bottom: 0px;}
+    .left-section {
+    float: left;
+}
+.right-section {
+    float: right;
+    width: 75%;
+}
+.right-section button {
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+}
+.file-upload-box{
+padding-top: 10px;
+    padding-bottom: 10px;
+}
+.search {
+    width: 97% !important;
+}
+
+.dropzone {
+  /*  margin-left: 237px; */
+}
+.dropzone div {
+    margin: 0 auto !important;
+    float: inherit !important;    border: 0px !important;
+}
+aside.UploadFileName ul{
+    text-align: center;
+}
+aside.UploadFileName ul li {
+   display: inline-block;
+    background: #ccc;
+    list-style-type: none;
+    color: #000;
+    padding: 3px 24px;    border-radius: 6px;    margin-left: 10px;
+}
+.upload {
+}
+aside.UploadFileName {
+      margin-top: -12px;
+}
+.upload {
+    height: 235px;
+}
+aside.UploadFileName ul {
+    padding: 0px;
+}
+
+.box.box-default.left-section-block {
+    height: 181px;
+}
