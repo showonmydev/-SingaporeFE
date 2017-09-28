@@ -1,6 +1,5 @@
 import React from 'react';
 import QueueAnim from 'rc-queue-anim';
-import Upload from 'material-ui-upload/Upload';
 import TextField from 'material-ui/TextField';
 import Dropzone from 'react-dropzone';
 import 'styles/custom/training/upload.css';

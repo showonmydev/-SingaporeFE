@@ -13,9 +13,8 @@ import store from './routes/store';
 import support from './routes/support';
 import tables from './routes/tables';
 import team from './routes/team';
-import timeline from './routes/timeline';
 import ui from './routes/ui';
-import training from './routes/training';
+import timeline from './routes/training';
 import MainApp from './components/MainApp';
 
 export default {
@@ -39,7 +38,6 @@ export default {
         tables,
         team,
         timeline,
-		training,
         ui
       ]);
     });

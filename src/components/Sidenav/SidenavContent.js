@@ -111,7 +111,7 @@ class SidebarContent extends React.Component {
           <FlatButton href="#/app/training"><i className="nav-icon material-icons">ondemand_video</i><span className="nav-text">Training</span></FlatButton>
           <ul>
             <li><FlatButton className="prepend-icon" href="#/app/training/timeline"><i className="nav-icon material-icons">access_time</i><span>Timeline</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/training/upload"><i className="nav-icon material-icons">cloud_upload</i><span>Upload Video</span></FlatButton></li>
+			<li><FlatButton className="prepend-icon" href="#/app/training/upload"><i className="nav-icon material-icons">cloud_upload</i><span>Upload Video</span></FlatButton></li>
             <li><FlatButton className="prepend-icon" href="#/app/training/certifications"><i className="nav-icon material-icons">school</i><span>Certifications</span></FlatButton></li>
             <li><FlatButton className="prepend-icon" href="#/app/training/packs"><i className="nav-icon material-icons">view_list</i><span>Packs</span></FlatButton></li>
             <li><FlatButton className="prepend-icon" href="#/app/training/singles"><i className="nav-icon material-icons">bubble_chart</i><span>Singles</span></FlatButton></li>

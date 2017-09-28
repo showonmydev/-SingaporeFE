@@ -10,9 +10,7 @@
 	
 }
 
-/*
-NEW CSS 
-*/
+
 .upload i {
     font-size: 192px;
     color: #ccc;
@@ -64,9 +62,6 @@ padding-top: 10px;
     width: 97% !important;
 }
 
-.dropzone {
-  /*  margin-left: 237px; */
-}
 .dropzone div {
     margin: 0 auto !important;
     float: inherit !important;    border: 0px !important;
