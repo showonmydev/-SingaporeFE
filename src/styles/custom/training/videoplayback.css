@@ -1,0 +1,46 @@
+.col-xl-12.video-list {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+.video-list .left-section {
+    display: inline-block;
+    width: 125px;
+    vertical-align: top;
+}	
+.video-list .right-section {
+    width: 160px;
+    display: inline-block;
+    vertical-align: top;
+}
+.video-list .right-section h5 {
+    margin: 0;
+}
+.timeline-video span.description {
+    display: inline-block;
+    float: left;
+}
+.timeline-video span.icon {
+    display: inline-block;
+    float: right;
+    margin-top: 24px;
+}
+.timeline-video .user-pic, p.timeline-video-comment, .timeline-video-reply p, .timeline-video-reply a {
+    display: inline-block;
+}
+.timeline-video-reply {
+    clear: both;
+    padding-left: 20px;
+}
+.TimelineCurrVideo {
+    display: inline-block;
+}
+.timeline-video-reply p {
+    color: #999;
+    padding-right: 10px;
+}
+.right-section p{
+color: #999;
+}

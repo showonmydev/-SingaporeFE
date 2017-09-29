@@ -1,7 +1,7 @@
 import React from 'react';
 import Master from '../../Master/Master.js';
 
-export default class Certifications extends React.Component
+export default class Vendors extends React.Component
 {
   constructor(props) {
     super(props);
