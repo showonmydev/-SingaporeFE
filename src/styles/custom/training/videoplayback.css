@@ -44,3 +44,33 @@
 .right-section p{
 color: #999;
 }
+.ThumpsUp span {
+    display: block;
+    float: left;
+    margin-right: 3px;
+    background: #66bb6a;
+    height: 20px;
+    width: 20px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 3px;
+}
+.ThumpsUp, .ThumpsDown {
+    float: left;margin-left: 9px;
+}
+.ThumpsDown span{
+	    background: #ef5350;
+	    display: block;
+    float: left;
+    margin-right: 3px;
+    height: 20px;
+    width: 20px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 3px;
+}
+.ThumpsUp a, .ThumpsDown a{
+ color:#adadad;
+}

@@ -302,6 +302,14 @@ export default class VideoHomePage extends React.Component {
             </p>
           </div>
         </Tab>
+        
+        <Tab label='PLAYBACK' value="f" containerElement={<Link to="/app/training/VideoPlayback"/>}>
+          <div>
+            <h2 style={styles.headline}>Controllable Tab B</h2>
+            <p>
+            </p>
+          </div>
+        </Tab>
 
       </Tabs>
       </div>
