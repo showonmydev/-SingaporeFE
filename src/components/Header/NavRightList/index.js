@@ -10,20 +10,30 @@ import 'html5-desktop-notifications';
 import styles from './styles';
 
 const apps = [
-  { title: 'Messages', icon: 'message', color: '#aa8838', to: 'app/messages' },
-  { title: 'Hangout', icon: 'call', color: '#33aa33', to: 'app/call' },
-  { title: 'Sales DB', icon: 'web_asset', color: '#3333aa', to: 'app/tools/salesdb' },
-  { title: 'Sales App', icon: 'devices', color: '#ff6600', to: 'app/tools/mobileapp' },
-  { title: 'Resources', icon: 'library_books', color: '#8080ff', to: 'app/tools/resources' },
-  { title: 'Reporting', icon: 'blur_on', color: '#88ff00', to: 'app/tools/reporting' },
+  { title: 'Inbox', icon: 'message', color: '#aa8838', to: 'app/messages' },
   { title: 'Analytics', icon: 'insert_chart', color: '#008888', to: 'app/stats' },
+  { title: 'CRM', icon: 'call', color: '#33aa33', to: 'app/call' },
+  { title: 'Projects', icon: 'web_asset', color: '#3333aa', to: 'app/tools/salesdb' },
+  { title: 'Apps', icon: 'devices', color: '#ff6600', to: 'app/tools/mobileapp' },
+  { title: 'Market', icon: 'library_books', color: '#8080ff', to: 'app/tools/resources' },
+  { title: 'Templetes', icon: 'blur_on', color: '#88ff00', to: 'app/tools/reporting' },
   { title: 'Timeline', icon: 'access_time', color: '#77ffff', to: 'app/training/timeline' },
 ];
 
+const notifications = [
+  { title: 'New Message', icon: 'message', color: '#aa8838', by: 'Mr. XYZ' },
+  { title: 'New Message1', icon: 'message', color: '#aa8838', by: 'Mr. XYZ' },
+  { title: 'New Message2', icon: 'message', color: '#aa8838', by: 'Mr. XYZ' },
+  { title: 'New Message3', icon: 'message', color: '#aa8838', by: 'Mr. XYZ' },
+  { title: 'New Message4', icon: 'message', color: '#aa8838', by: 'Mr. XYZ' },
+];
+
 const profileLinks = [
-  { title: 'My Account', icon: 'fingerprint', color: '#aa8838', to: 'app/account' },
-  { title: 'Settings', icon: 'settings', color: '#888888', to: 'app/settings' },
-  { title: 'Live Support', icon: 'headset_mic', color: '#3333aa', to: 'app/support' },
+  { title: 'Profile', icon: 'fingerprint', color: '#888885', to: 'app/Profile' },
+  { title: 'Account', icon: 'account_circle', color: '#888885', to: 'app/account' },
+  { title: 'Teams', icon: 'people', color: '#888885', to: 'app/teams' },
+  { title: 'Settings', icon: 'settings', color: '#888885', to: 'app/settings' },
+  { title: 'Integrations', icon: 'headset_mic', color: '#888885', to: 'app/integrations' },
 ];
 
 class NavRightList extends React.Component {
@@ -51,8 +61,8 @@ class NavRightList extends React.Component {
 
   runTestNotification = () => {
     setTimeout(() => {
-      notify.createNotification('Test Notification', {
-        body: 'This is a test notification',
+      notify.createNotification('System Notifications', {
+        body: 'This is a System Notifications',
         icon: 'test',
       });
       this.setState({ notification: 1 });
@@ -65,8 +75,15 @@ class NavRightList extends React.Component {
     const userName = user.get('name') || user.get('email');
     return (
       <ul className="list-unstyled float-right">
+      	<li>
+          <IconButton
+            style={styles.imgIconButton}
+            className="md-button header-btn">
+            <a href="#/app/training/upload"><i className="nav-icon material-icons">file_upload</i></a>
+          </IconButton>
+        </li>
         <li>
-          <IconMenu
+        <IconMenu
             iconButtonElement={
               <IconButton
                 style={styles.imgIconButton}
@@ -98,11 +115,29 @@ class NavRightList extends React.Component {
           </IconMenu>
         </li>
         <li>
-          <IconButton
-            style={styles.imgIconButton}
-            className="md-button header-btn">
-            <i className="material-icons">{notification ? 'notifications' : 'notifications_none'}</i>
-          </IconButton>
+          <IconMenu
+            iconButtonElement={
+              <IconButton
+                className="md-button header-btn">
+                <i className="material-icons">{notification ? 'notifications' : 'notifications_none'}</i>
+              </IconButton>
+            }
+            onChange={this.handleChange}
+            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+            targetOrigin={{ horizontal: 'right', vertical: 'top' }}
+            menuStyle={styles.appNotification}
+          >
+            {
+              notifications.map((notifications, index) => (
+                <MenuItem
+                      primaryText={notifications.title +" by "+ notifications.by}
+                      style={styles.profileLink}
+                      innerDivStyle={styles.appNotificationInner}
+                      key={index}
+                    />
+              ))
+            }
+          </IconMenu>
         </li>
         <li style={{marginRight: '10px'}}>
           <IconMenu

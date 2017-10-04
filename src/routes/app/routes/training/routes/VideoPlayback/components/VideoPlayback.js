@@ -6,6 +6,7 @@ import Toggle from 'material-ui/Toggle';
 import ListItem from 'material-ui/List/ListItem';
 import Avatar from 'material-ui/Avatar';
 import 'styles/custom/training/videoplayback.css';
+import FlatButton from 'material-ui/FlatButton';
 
 
 const styles = {
@@ -88,7 +89,12 @@ class VideoCommentSection extends React.Component {
 	render() {
     return (
 		<div className="col-xl-12 put-user-comment">
-		    <TextField hintText="Enter Here your comment" fullWidth={true} value={this.props.comment}/>
+			<div className="Comment-section">
+		    <TextField hintText="Enter Here your comment" fullWidth={true} value={this.props.comment} onChange={this.props.clickHandlerPostComment}/>
+		    </div>
+		    <div className="comment-button">
+		    <FlatButton label="Submit" primary={true} onClick={this.props.SubmitComment}/>
+		    </div>
 		    
 		</div>
 );}
@@ -180,6 +186,7 @@ class VideoPlayback extends React.Component {
     	this.changeStatus=this.changeStatus.bind(this);
     	this.likecount=this.likecount.bind(this);
     	this.PostComment=this.PostComment.bind(this);
+    	this.SubmitComment=this.SubmitComment.bind(this);
   }
 	
    //this is for count lik		
@@ -230,14 +237,28 @@ class VideoPlayback extends React.Component {
 	}
    
    
-   PostComment(value){
-   	var comment_value=this.state.comment;
-   	console.log(value);
-   	var commentlist=this.state.commentlist;
-   	var add={id:"10",comment: comment_value,description:"This is test video",time:"5M views - 6 Months ago",name:"Video",like:"1",unlike:"1"};
-   	commentlist.push(add)
-   	console.log(commentlist)
-   	//this.setState({commentlist: commentlist})
+   PostComment(newValue){
+   	this.setState({comment:newValue.target.value})
+   	//console.log(this.state.comment);
+   }
+   
+   SubmitComment(){
+   	let comment=this.state.comment;
+	let commentlist=this.state.commentlist;
+	var count=(this.state.commentlist).length;
+	
+	commentlist.push({
+		id:parseInt(count)+1,
+		comment:comment,
+		description:comment,
+		time:"0M views - 0 Months ago",
+		name:"Video",
+		like:"0",
+		unlike:"0"
+	})
+	this.setState({comment:""})
+	this.setState({commentlist:commentlist})
+   	console.log(commentlist);
    }
    
    
@@ -264,7 +285,9 @@ class VideoPlayback extends React.Component {
 			  	<div className="row">
 			  	  <div className="col-xl-8 timeline-video">
 			      	<TimelineVideo video={this.state.video} like={this.state.video.like} unlike={this.state.video.unlike} description={this.state.video.description} time={this.state.video.time} clickHandlerlike={this.likecount}/>
-			      	<VideoCommentSection comment={this.state.comment} clickHandlerPostComment={this.PostComment}/>
+			      	
+			      	<VideoCommentSection comment={this.state.comment} clickHandlerPostComment={this.PostComment} SubmitComment={this.SubmitComment}/>
+			      	
 			      	{
 			      	this.state.commentlist.map(
 		              (commentlist,index)=>{return <CommentList key={commentlist.id} comment={commentlist.comment} description={commentlist.description} like={commentlist.like} unlike={commentlist.unlike} time={commentlist.time} clickHandlerlike={this.likecount} index={index}/>

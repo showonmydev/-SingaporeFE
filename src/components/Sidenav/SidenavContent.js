@@ -91,154 +91,35 @@ class SidebarContent extends React.Component {
 
     return (
       <ul className="nav" ref={(c) => { this.nav = c; }}>
-        <li><FlatButton href="#/app/dashboard"><i className="nav-icon material-icons">dashboard</i><span className="nav-text">Dashboard</span></FlatButton></li>
-        <li><FlatButton href="#/app/messages"><i className="nav-icon material-icons">message</i><span className="nav-text">Messages</span></FlatButton></li>
-        <li><FlatButton href="#/app/stats"><i className="nav-icon material-icons">insert_chart</i><span className="nav-text">Analytics</span></FlatButton></li>
-        <li><FlatButton href="#/app/team"><i className="nav-icon material-icons">group</i><span className="nav-text">Team</span></FlatButton></li>
-        <li><FlatButton href="#/app/feed"><i className="nav-icon material-icons">question_answer</i><span className="nav-text">Feed</span></FlatButton></li>
+        <li><FlatButton href="#/app/dashboard"><i className="nav-icon material-icons">dashboard</i><span className="nav-text">Analytics</span></FlatButton></li>
+        <li><FlatButton href="#/app/messages"><i className="nav-icon material-icons">message</i><span className="nav-text">Inbox</span></FlatButton></li>
+        
+          <li className="nav-divider" />
+        	<li className="nav-header"><span><big>TOOLS</big></span></li>
+            <li><FlatButton href="#/app/tools/crm"><i className="nav-icon material-icons">web_asset</i><span className="nav-text">CRM</span></FlatButton></li>
+            <li><FlatButton href="#/app/tools/project"><i className="nav-icon material-icons">devices</i><span className="nav-text">Project</span></FlatButton></li>
+            <li><FlatButton href="#/app/tools/apps"><i className="nav-icon material-icons">library_books</i><span className="nav-text">Apps</span></FlatButton></li>
+            <li><FlatButton href="#/app/tools/market"><i className="nav-icon material-icons">widgets</i><span className="nav-text">Market</span></FlatButton></li>
+            
+          <li className="nav-divider" />
+        	<li className="nav-header"><span><big>RESOURCES</big></span></li>
+            <li><FlatButton href="#/app/tools/crm"><i className="nav-icon material-icons">web_asset</i><span className="nav-text">Regs DB</span></FlatButton></li>
+            <li><FlatButton href="#/app/tools/project"><i className="nav-icon material-icons">devices</i><span className="nav-text">Guides</span></FlatButton></li>
+            <li><FlatButton href="#/app/tools/apps"><i className="nav-icon material-icons">library_books</i><span className="nav-text">Web Assets</span></FlatButton></li>
+        
+        	<li className="nav-divider" />
+        	<li className="nav-header"><span><big>TRAINING</big></span></li>
+            <li><FlatButton href="#/app/training/timeline"><i className="nav-icon material-icons">access_time</i><span className="nav-text">Timeline</span></FlatButton></li>
+            <li><FlatButton href="#/app/training/certifications"><i className="nav-icon material-icons">school</i><span className="nav-text">Certifications</span></FlatButton></li>
+            <li><FlatButton href="#/app/training/packs"><i className="nav-icon material-icons">view_list</i><span className="nav-text">Packs</span></FlatButton></li>
+            <li><FlatButton href="#/app/training/singles"><i className="nav-icon material-icons">bubble_chart</i><span className="nav-text">Singles</span></FlatButton></li>
+            <li><FlatButton href="#/app/training/pros"><i className="nav-icon material-icons">verified_user</i><span className="nav-text">Pros</span></FlatButton></li>
+            <li><FlatButton href="#/app/training/vendors"><i className="nav-icon material-icons">business_center</i><span className="nav-text">Vendors</span></FlatButton></li>
+            
         <li className="nav-divider" />
-        <li>
-          <FlatButton href="#/app/tools"><i className="nav-icon material-icons">important_devices</i><span className="nav-text">Tools</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/tools/salesdb"><i className="nav-icon material-icons">web_asset</i><span>Sales DB</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/tools/mobileapp"><i className="nav-icon material-icons">devices</i><span>Sales App</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/tools/resources"><i className="nav-icon material-icons">library_books</i><span>Resources</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/tools/assets"><i className="nav-icon material-icons">widgets</i><span>Web Assets</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/tools/reporting"><i className="nav-icon material-icons">blur_on</i><span>Reporting</span></FlatButton></li>
-          </ul>
-        </li>
-        <li>
-          <FlatButton href="#/app/training"><i className="nav-icon material-icons">ondemand_video</i><span className="nav-text">Training</span></FlatButton>
-          <ul>
-          	
-            <li><FlatButton className="prepend-icon" href="#/app/training/timeline"><i className="nav-icon material-icons">access_time</i><span>Timeline</span></FlatButton></li>
-			<li><FlatButton className="prepend-icon" href="#/app/training/upload"><i className="nav-icon material-icons">cloud_upload</i><span>Upload Video</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/training/certifications"><i className="nav-icon material-icons">school</i><span>Certifications</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/training/packs"><i className="nav-icon material-icons">view_list</i><span>Packs</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/training/singles"><i className="nav-icon material-icons">bubble_chart</i><span>Singles</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/training/pros"><i className="nav-icon material-icons">verified_user</i><span>Pros</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/training/vendors"><i className="nav-icon material-icons">business_center</i><span>Vendors</span></FlatButton></li>
-          </ul>
-        </li>
-        <li><FlatButton href="#/app/market"><i className="nav-icon material-icons">account_balance</i><span className="nav-text">Market</span></FlatButton></li>
-        <li className="nav-divider" />
-        <li><FlatButton href="#/app/extensions"><i className="nav-icon material-icons">extension</i><span className="nav-text">Extensions</span></FlatButton></li>
-        <li><FlatButton href="#/app/aboutus"><i className="nav-icon material-icons">power_settings_new</i><span className="nav-text">About Us</span></FlatButton></li>
-        <li className="nav-divider" />
-        <li>
-          <FlatButton href="#/app/ui"><i className="nav-icon material-icons">folder_open</i><span className="nav-text">UI Kit</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/buttons"><span>Buttons</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/cards"><span>Cards</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/boxes"><span>Boxes</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/icons"><span>Icons</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/icon-boxes"><span>Icon Boxes</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/lists"><span>Lists</span><span className="badge badge-pill badge-success">9</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/pricing-tables"><span>Pricing Tables</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/timeline"><span>Timeline</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/feature-callouts"><span>Feature Callouts</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/components"><span>Components</span><span className="badge badge-pill badge-danger">11</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/menus"><span>Menus</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/hover"><span>Hover</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/sashes"><span>Sashes</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/testimonials"><span>Testimonials</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/call-to-actions"><span>Call to Actions</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/typography"><span>Typography</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/grids"><span>Grids</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ui/colors"><span>Colors</span></FlatButton></li>
-          </ul>
-        </li>
-        <li>
-          <FlatButton href="#/app/form"><i className="nav-icon material-icons">mode_edit</i><span className="nav-text">Forms</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/form/components"><span>Form Components</span><span className="badge badge-pill badge-info">12</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/form/steppers"><span>Steppers</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/form/layouts"><span>Form Layouts</span></FlatButton></li>
-          </ul>
-        </li>
-        <li>
-          <FlatButton href="#/app/table"><i className="nav-icon material-icons">list</i><span className="nav-text">Tables</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/table/static"><span>Static Tables</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/table/responsive"><span>Responsive Tables</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/table/data"><span>Data Tables</span></FlatButton></li>
-          </ul>
-        </li>
-        <li>
-          <FlatButton href="#/app/chart"><i className="nav-icon material-icons">pie_chart_outlined</i><span className="nav-text">Charts</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/chart/line"><span>Line & Area</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/chart/bar"><span>Bar</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/chart/pie"><span>Pie</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/chart/scatter"><span>Scatter</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/chart/radar"><span>Radar</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/chart/funnel"><span>Funnel</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/chart/more"><span>More</span></FlatButton></li>
-          </ul>
-        </li>
-        <li>
-          <FlatButton href="#/app/page"><i className="nav-icon material-icons">content_copy</i><span className="nav-text">Pages</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/page/about"><span>About</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/page/services"><span>Services</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/page/careers"><span>Careers</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/page/contact"><span>Contact</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/page/faqs"><span>FAQs</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/page/blog"><span>Blog</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/page/terms"><span>Terms of Services</span></FlatButton></li>
-          </ul>
-        </li>
-        <li>
-          <FlatButton href="#/app/ecommerce"><i className="nav-icon material-icons">shopping_cart</i><span className="nav-text">eCommerce</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/ecommerce/products"><span>Products</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ecommerce/horizontal-products"><span>Products (Honrizonal)</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/ecommerce/invoice"><span>Invoice</span></FlatButton></li>
-          </ul>
-        </li>
-        <li className="nav-divider" />
-        <li><FlatButton href="#/app/extra"><i className="nav-icon material-icons">more_horiz</i><span className="nav-text">Extra Pages</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/login"><span>Login</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/sign-up"><span>Sign Up</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/forgot-password"><span>Forgot Password</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/confirm-email"><span>Confirm Email</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/lock-screen"><span>Lock Screen</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/404"><span>404 Error</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/500"><span>500 Error</span></FlatButton></li>
-          </ul>
-        </li>
-        <li>
-          <FlatButton href="#/app/pglayout"><i className="nav-icon material-icons">desktop_windows</i><span className="nav-text">Page Layouts</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="#/app/pglayout/full-width"><span>Full Width</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/app/pglayout/centered"><span>Centered</span></FlatButton></li>
-            <li><FlatButton className="prepend-icon" href="#/fullscreen"><span>Fullscreen</span></FlatButton></li>
-          </ul>
-        </li>
-        <li>
-          <FlatButton href="#/app/menu"><i className="nav-icon material-icons">sort</i><span className="nav-text">Menu Levels</span></FlatButton>
-          <ul>
-            <li><FlatButton className="prepend-icon" href="javascript:;"><span>Level 1</span></FlatButton></li>
-            <li>
-              <FlatButton className="prepend-icon" href="javascript:;"><span>Level 1</span></FlatButton>
-              <ul>
-                <li><FlatButton href="javascript:;"><span>Level 2</span></FlatButton></li>
-                <li>
-                  <FlatButton href="javascript:;"><span>Level 2</span></FlatButton>
-                  <ul>
-                    <li><FlatButton href="javascript:;"><span>Level 3</span></FlatButton></li>
-                    <li><FlatButton href="javascript:;"><span>Level 3</span></FlatButton></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li className="nav-divider" />
-        <li className="nav-header"><span>Material Design</span></li>
-        <li className="li-small"><FlatButton href="#/app/form/components"><i className="nav-icon nav-dot material-icons color-success">fiber_manual_record</i><span className="nav-text">Form Components</span></FlatButton></li>
-        <li className="li-small"><FlatButton href="#/app/ui/components"><i className="nav-icon nav-dot material-icons color-info">fiber_manual_record</i><span className="nav-text">UI Components</span></FlatButton></li>
+        	<li className="nav-header"><span><big>SUBSCRIPTIONS</big></span></li>
+            <li><FlatButton href="#/app/tools/crm"><i className="nav-icon material-icons">web_asset</i><span className="nav-text">CPP Solar + Storage</span></FlatButton></li>
+            <li><FlatButton href="#/app/tools/project"><i className="nav-icon material-icons">devices</i><span className="nav-text">Browse Channels</span></FlatButton></li>
       </ul>
     );
   }

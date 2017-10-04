@@ -74,3 +74,17 @@ color: #999;
 .ThumpsUp a, .ThumpsDown a{
  color:#adadad;
 }
+
+.Comment-section {
+    width: 83%;
+    float: left;
+}
+.comment-button {
+    float: left;
+    margin-left: 15px;
+}
+.put-user-comment:after {
+    display: block;
+    clear: both;
+    content: "";
+}

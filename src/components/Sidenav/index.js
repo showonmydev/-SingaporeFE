@@ -36,7 +36,7 @@ class Sidebar extends React.Component {
     if (navCollapsed) {
       toggleIcon = <i className="material-icons">radio_button_unchecked</i>;
     } else {
-      toggleIcon = <i className="material-icons">radio_button_checked</i>;
+      toggleIcon = <i className="material-icons">menu</i>;
     }
 
     return (

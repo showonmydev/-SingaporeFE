@@ -129,6 +129,26 @@ const styles = {
     minHeight: 0,
     lineHeight: '32px',
   },
+  appNotification: {
+    width: 200,
+    minHeight: 200,
+    border: '1px solid #ccc',
+    borderColor: 'rgba(0, 0, 0, .2)',
+    color: '#000',
+    boxShadow: '0 2px 10px rgba(0, 0, 0, .2)',
+    outline: 'none',
+    overflow: 'hidden',
+    borderRadius: 2,
+  },
+  appNotificationInner: {
+    padding: 0,
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'left',
+    flexDirection: 'column',
+    fontSize: '13px',
+    lineHeight: '20px',
+  },
 };
 
 export default styles;

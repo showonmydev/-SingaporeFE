@@ -23,7 +23,7 @@ export class Helper extends React.Component
             <source src={this.props.path} type="video/mp4"/>
             <track label="English" kind="subtitles" srcLang="en" default />
         </Video>
-        <h1>{this.props.description}</h1>
+        <h1><a href="#/app/training/VideoPlayback">{this.props.description}</a></h1>
         <p>{this.props.time}</p>
      </div>
     );
